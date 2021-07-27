@@ -1,0 +1,70 @@
+<main>
+  <h1>Zoom Angular</h1>
+
+  <!-- <form (ngSubmit)="agregar()">
+    <div>
+      <input type="text"
+             placeholder="Meeting number"
+             name="meetingNumber"
+             [ngModel]="joinMeetingForm.meetingNumber">
+    </div>
+    <p></p>
+    <div>
+      <input type="text"
+             placeholder="User Name"
+             name="userName"
+             [ngModel]="joinMeetingForm.userName">
+    </div>
+    <p></p>
+    <div>
+      <input type="text"
+             placeholder="Email"
+             name="userEmail"
+             [ngModel]="joinMeetingForm.userEmail">
+    </div>
+    <p></p>
+    <div>
+      <input type="password"
+             placeholder="Password"
+             name="passWord"
+             [ngModel]="joinMeetingForm.passWord">
+    </div>
+  </form> -->
+
+  <form (ngSubmit)="agregar()">
+    <div>
+      <input type="text"
+             placeholder="Meeting number"
+             name="meetingNumber"
+             [value]="joinMeetingForm.meetingNumber"
+             (input)="putMeetData($event)">
+    </div>
+    <p></p>
+    <div>
+      <input type="text"
+             placeholder="User Name"
+             name="userName"
+             [value]="joinMeetingForm.userName"
+             (input)="putMeetData($event)">
+    </div>
+    <p></p>
+    <div>
+      <input type="text"
+             placeholder="Email"
+             name="userEmail"
+             [value]="joinMeetingForm.userEmail"
+             (input)="putMeetData($event)">
+    </div>
+    <p></p>
+    <div>
+      <input type="password"
+             placeholder="Password"
+             name="passWord"
+             [value]="joinMeetingForm.passWord"
+             (input)="putMeetData($event)">
+    </div>
+  </form>
+
+  <!-- <button (click)="agregar()">Test</button> -->
+  <button (click)="getSignature()">Join Meeting</button>
+</main>
